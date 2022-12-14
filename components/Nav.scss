@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    img {
+      border-radius: 50px;
+      border: 2px white solid;
+    }
+  }
+  font-size: 1.3rem;
+}
+
+@media (min-width: 450px) {
+  .nav {
+    margin: auto 40px;
+  }
+}

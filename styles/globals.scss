@@ -1,0 +1,58 @@
+@import "./../components/Nav.scss";
+
+:root {
+  --columns: 5;
+  --yellow: rgba(238, 188, 31, 1);
+  --pink: rgba(255, 82, 145, 1);
+  --blue: rgba(64, 98, 187, 1);
+  --green: rgba(6, 141, 126, 1);
+  --white: rgba(248, 255, 229, 1);
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+/*------------------------------------------------*/
+.app_wrapper {
+  max-width: 1400px;
+  margin: auto;
+}
+/*------------------------------------------------*/
+
+body {
+  background-color: #182028;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  margin: 50px -40px;
+  list-style-type: none;
+}
+
+li {
+  /*grid-column-end: span 2;*/
+}
+
+.listImage img {
+  width: 50%;
+}
