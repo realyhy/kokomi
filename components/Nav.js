@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logoImage from "../public/images/Kokomi-logo.jpg";
+import logoImage from "../public/images/kokomi-logo.jpg";
 
 export default function Nav() {
   return (
