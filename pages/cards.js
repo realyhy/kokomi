@@ -2,6 +2,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { GET_ALL_CARDS } from "../lib/api";
 import Link from "next/link";
 import Search from "../components/Search";
+import React from "react";
 
 export default function Cards(cards) {
   return (
@@ -12,13 +13,23 @@ export default function Cards(cards) {
         {cards.cards.map((val, i) => {
           return (
             <>
-              <li key={i}>
+              <li>
                 <Link href={`card/` + val.attributes.slug}>
-                  <div className="listImage">
+                  <div key={i} className="listImage">
                     <img
                       src={val.attributes.Image.data.attributes.url}
                       alt={val.attributes.name}
                     />
+                    {/*  {val.attributes.types.data[0].attributes.name} */}
+                    <p>
+                      {val.attributes.name}
+                      <br />
+                      <small>
+                        {val.attributes.primary_type.data.attributes.name}
+                        <br />
+                        {val.attributes.secondary_type.data?.attributes.name}
+                      </small>
+                    </p>
                   </div>
                 </Link>
               </li>

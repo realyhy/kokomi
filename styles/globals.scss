@@ -56,3 +56,58 @@ li {
 .listImage img {
   width: 50%;
 }
+blockquote::before {
+  content: open-quote;
+}
+blockquote::after {
+  content: close-quote;
+}
+blockquote {
+  quotes: "“" "”" "‘" "’";
+  font: 2rem/1.4 Georgia, serif;
+  font-style: italic;
+  text-align: center;
+  max-width: 20em;
+  margin: auto;
+}
+
+small {
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  display: inline-block;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 23.334% 76.667%;
+  position: relative;
+}
+.card-desc-decoration {
+  background-color: #3b3c3d38;
+  padding: 20px;
+  margin: 20px;
+}
+
+.energy_bg {
+  background-image: url("../public/images/character_energy.png");
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: black;
+  display: inline-block;
+  font-weight: 700;
+}
+.hp_bg {
+  background-image: url("../public/images/character_hp_bg.png");
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  color: black;
+  font-weight: 700;
+}

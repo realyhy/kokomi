@@ -20,7 +20,7 @@ const searchClient = algoliasearch(
 function Hit({ hit }) {
   return (
     <div className="hit">
-      <Link href={`/card/` + `${hit.name}`}>
+      <Link href={`/card/` + `${hit.slug}`}>
         <Highlight attribute="name" hit={hit} />
         <img src={hit.Image.formats.thumbnail.url} />
       </Link>
