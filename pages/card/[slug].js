@@ -1,8 +1,8 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { GET_ALL_SLUGS, GET_INDIVIDAL_CARD } from "../../lib/api";
+import Search from "../../components/Search";
 import Image from "next/image";
 import Link from "next/link";
-import Search from "../../components/Search";
 
 const client = new ApolloClient({
   uri: `${process.env.GRAPHQL_API}`,
@@ -72,7 +72,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
