@@ -3,6 +3,7 @@ import { GET_ALL_CARDS } from "../lib/api";
 import Link from "next/link";
 import Search from "../components/Search";
 import React from "react";
+import Image from "next/image";
 
 export default function Cards(cards) {
   return (
@@ -16,9 +17,11 @@ export default function Cards(cards) {
               <li>
                 <Link href={`card/` + val.attributes.slug}>
                   <div key={i} className="listImage">
-                    <img
+                    <Image
                       src={val.attributes.Image.data.attributes.url}
                       alt={val.attributes.name}
+                      width={144}
+                      height={246}
                     />
                     {/*  {val.attributes.types.data[0].attributes.name} */}
                     <p>

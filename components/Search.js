@@ -11,6 +11,7 @@ import {
 } from "react-instantsearch-hooks-web";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const searchClient = algoliasearch(
   "6I10IUWO5Q",
@@ -22,7 +23,12 @@ function Hit({ hit }) {
     <div className="hit">
       <Link href={`/card/` + `${hit.slug}`}>
         <Highlight attribute="name" hit={hit} />
-        <img src={hit.Image.formats.thumbnail.url} />
+        <Image
+          src={hit.Image.formats.thumbnail.url}
+          alt={hit.name}
+          width={91}
+          height={156}
+        />
       </Link>
     </div>
   );
