@@ -14,6 +14,7 @@
     "@apollo/client": "^3.7.2",
     "@meilisearch/instant-meilisearch": "^0.8.1",
     "@next/font": "^13.0.6",
+    "@vercel/analytics": "^0.1.6",
     "algoliasearch": "^4.14.2",
     "axios": "^1.2.1",
     "date-fns": "^2.29.3",

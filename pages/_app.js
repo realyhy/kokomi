@@ -2,6 +2,7 @@ import "../styles/globals.scss";
 import Nav from "../components/Nav";
 import { Inter } from "@next/font/google";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
         `}</style>
         <Nav />
         <Component {...pageProps} />
+        <Analytics />
       </div>
     </>
   );

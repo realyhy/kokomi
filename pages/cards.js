@@ -23,7 +23,6 @@ export default function Cards(cards) {
                       width={144}
                       height={246}
                     />
-                    {/*  {val.attributes.types.data[0].attributes.name} */}
                     <p>
                       {val.attributes.name}
                       <br />
