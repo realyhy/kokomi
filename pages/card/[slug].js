@@ -100,7 +100,7 @@ export async function getStaticProps({ params }) {
         energy: attrs.energy,
         hp: attrs.hp,
       },
-      revalidate: 10,
+      revalidate: 20,
     },
   };
 }
