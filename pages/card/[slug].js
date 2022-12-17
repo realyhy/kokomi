@@ -13,13 +13,10 @@ export default function Card({ card }) {
   return (
     <>
       <Search />
+      <h1 align="center">{card.name} </h1>
+      <h3 align="center">{card.primaryType}</h3>
       <div className="card-wrapper">
         <div className="card-image">
-          <h1>{card.name}</h1>
-          <br />
-          {card.primaryType}
-          <br />
-          {card.secondaryType}
           <br />
           {card.faction}
           <br />
@@ -41,6 +38,10 @@ export default function Card({ card }) {
             ) : (
               <span></span>
             )}
+            <br />
+            {card.tag}
+            <br />
+            {card.secondaryType}
           </p>
           <Link href={`/cards`}> Back to cards list </Link>
         </div>
@@ -51,10 +52,8 @@ export default function Card({ card }) {
           />
           <h2>Other</h2>
           <p>
-            <br />
             How to get: {card.get}
             <br />
-            {card.tag}
             <br />
           </p>
         </div>
@@ -104,20 +103,4 @@ export async function getStaticProps({ params }) {
       revalidate: 10,
     },
   };
-}
-
-{
-  /*  secondaryType: attrs.secondary_type.data?.attributes.name 
-          type: attrs.types.data[0].attributes.name,
-          
-          
-                    {card.diceCost === 0 ? (
-            <span className="product-sold-out">""</span>
-          ) : (
-            <span className="product-remaining">Cost: {card.diceCost}</span>
-          )}
-          
-          
-          
-          */
 }
